@@ -1,87 +1,427 @@
 [
-  { "word": "error", "meaning": "エラー" },
-  { "word": "exception", "meaning": "例外" },
-  { "word": "warning", "meaning": "警告" },
-  { "word": "critical", "meaning": "重大な" },
-  { "word": "fatal", "meaning": "致命的な" },
-  { "word": "debug", "meaning": "デバッグ情報" },
-  { "word": "info", "meaning": "情報メッセージ" },
-  { "word": "stack", "meaning": "スタック" },
-  { "word": "trace", "meaning": "トレース（実行経路）" },
-  { "word": "stack trace", "meaning": "エラー発生時の実行経路" },
-  { "word": "invalid", "meaning": "無効な" },
-  { "word": "not found", "meaning": "見つからない" },
-  { "word": "missing", "meaning": "欠落している" },
-  { "word": "required", "meaning": "必須" },
-  { "word": "unauthorized", "meaning": "認証されていない" },
-  { "word": "forbidden", "meaning": "アクセス禁止" },
-  { "word": "timeout", "meaning": "時間切れ" },
-  { "word": "expired", "meaning": "期限切れ" },
-  { "word": "failed", "meaning": "失敗" },
-  { "word": "cannot", "meaning": "できない" },
-  { "word": "unsupported", "meaning": "サポートされていない" },
-  { "word": "conflict", "meaning": "競合" },
-  { "word": "overflow", "meaning": "オーバーフロー（容量超過）" },
-  { "word": "underflow", "meaning": "アンダーフロー（下限割れ）" },
-  { "word": "out of memory", "meaning": "メモリ不足" },
-  { "word": "disk full", "meaning": "ディスク容量不足" },
-  { "word": "connection refused", "meaning": "接続拒否" },
-  { "word": "connection reset", "meaning": "接続リセット" },
-  { "word": "connection closed", "meaning": "接続が閉じられた" },
-  { "word": "host unreachable", "meaning": "ホストに到達できない" },
-  { "word": "network unreachable", "meaning": "ネットワークに到達できない" },
-  { "word": "broken pipe", "meaning": "通信切断（Broken Pipe）" },
-  { "word": "invalid argument", "meaning": "無効な引数" },
-  { "word": "illegal state", "meaning": "不正な状態" },
-  { "word": "illegal argument", "meaning": "不正な引数" },
-  { "word": "index out of bounds", "meaning": "配列やリストの範囲外" },
-  { "word": "null pointer", "meaning": "ヌルポインタ参照" },
-  { "word": "segmentation fault", "meaning": "不正メモリアクセス" },
-  { "word": "syntax error", "meaning": "文法エラー" },
-  { "word": "type error", "meaning": "型エラー" },
-  { "word": "reference error", "meaning": "参照エラー" },
-  { "word": "name error", "meaning": "名前解決エラー" },
-  { "word": "module not found", "meaning": "モジュールが見つからない" },
-  { "word": "import error", "meaning": "インポートエラー" },
-  { "word": "compile error", "meaning": "コンパイルエラー" },
-  { "word": "runtime error", "meaning": "実行時エラー" },
-  { "word": "IO error", "meaning": "入出力エラー" },
-  { "word": "permission denied", "meaning": "アクセス権限なし" },
-  { "word": "access denied", "meaning": "アクセス拒否" },
-  { "word": "invalid credentials", "meaning": "無効な認証情報" },
-  { "word": "authentication failed", "meaning": "認証失敗" },
-  { "word": "authorization failed", "meaning": "認可失敗" },
-  { "word": "resource not available", "meaning": "リソースが利用できない" },
-  { "word": "service unavailable", "meaning": "サービスが利用できない" },
-  { "word": "gateway timeout", "meaning": "ゲートウェイのタイムアウト" },
-  { "word": "too many requests", "meaning": "リクエスト過多" },
-  { "word": "rate limit exceeded", "meaning": "レート制限超過" },
-  { "word": "deprecated", "meaning": "非推奨" },
-  { "word": "unexpected token", "meaning": "予期しないトークン" },
-  { "word": "unexpected end of input", "meaning": "予期しない入力終端" },
-  { "word": "invalid format", "meaning": "無効な形式" },
-  { "word": "parse error", "meaning": "パースエラー" },
-  { "word": "serialization error", "meaning": "シリアライズエラー" },
-  { "word": "deserialization error", "meaning": "デシリアライズエラー" },
-  { "word": "validation error", "meaning": "バリデーションエラー" },
-  { "word": "constraint violation", "meaning": "制約違反" },
-  { "word": "duplicate entry", "meaning": "重複エントリ" },
-  { "word": "deadlock", "meaning": "デッドロック" },
-  { "word": "timeout exceeded", "meaning": "タイムアウト超過" },
-  { "word": "max retries exceeded", "meaning": "最大再試行回数超過" },
-  { "word": "file not found", "meaning": "ファイルが見つからない" },
-  { "word": "directory not found", "meaning": "ディレクトリが見つからない" },
-  { "word": "read only", "meaning": "読み取り専用" },
-  { "word": "write protected", "meaning": "書き込み禁止" },
-  { "word": "broken link", "meaning": "リンク切れ" },
-  { "word": "circular reference", "meaning": "循環参照" },
-  { "word": "stack overflow", "meaning": "スタックオーバーフロー" },
-  { "word": "heap overflow", "meaning": "ヒープオーバーフロー" },
-  { "word": "memory leak", "meaning": "メモリリーク" },
-  { "word": "connection aborted", "meaning": "接続中止" },
-  { "word": "operation not permitted", "meaning": "操作が許可されていない" },
-  { "word": "unknown error", "meaning": "不明なエラー" },
-  { "word": "internal error", "meaning": "内部エラー" },
-  { "word": "system error", "meaning": "システムエラー" },
-  { "word": "fatal error", "meaning": "致命的エラー" }
+  {
+    "word": "error",
+    "meaning": "エラー",
+    "reading": "エラー"
+  },
+  {
+    "word": "exception",
+    "meaning": "例外",
+    "reading": "エクセプション"
+  },
+  {
+    "word": "warning",
+    "meaning": "警告",
+    "reading": "ワーニング"
+  },
+  {
+    "word": "critical",
+    "meaning": "重大な",
+    "reading": "クリティカル"
+  },
+  {
+    "word": "fatal",
+    "meaning": "致命的な",
+    "reading": "フェイタル"
+  },
+  {
+    "word": "debug",
+    "meaning": "デバッグ情報",
+    "reading": "デバッグ"
+  },
+  {
+    "word": "info",
+    "meaning": "情報メッセージ",
+    "reading": "インフォ"
+  },
+  {
+    "word": "stack",
+    "meaning": "スタック",
+    "reading": "スタック"
+  },
+  {
+    "word": "trace",
+    "meaning": "トレース（実行経路）",
+    "reading": "トレース"
+  },
+  {
+    "word": "stack trace",
+    "meaning": "エラー発生時の実行経路",
+    "reading": "スタックトレース"
+  },
+  {
+    "word": "invalid",
+    "meaning": "無効な",
+    "reading": "インバリッド"
+  },
+  {
+    "word": "not found",
+    "meaning": "見つからない",
+    "reading": "ノットファウンド"
+  },
+  {
+    "word": "missing",
+    "meaning": "欠落している",
+    "reading": "ミッシング"
+  },
+  {
+    "word": "required",
+    "meaning": "必須",
+    "reading": "リクワイアド"
+  },
+  {
+    "word": "unauthorized",
+    "meaning": "認証されていない",
+    "reading": "アンオーソライズド"
+  },
+  {
+    "word": "forbidden",
+    "meaning": "アクセス禁止",
+    "reading": "フォービドゥン"
+  },
+  {
+    "word": "timeout",
+    "meaning": "時間切れ",
+    "reading": "タイムアウト"
+  },
+  {
+    "word": "expired",
+    "meaning": "期限切れ",
+    "reading": "エクスパイアド"
+  },
+  {
+    "word": "failed",
+    "meaning": "失敗",
+    "reading": "フェイルド"
+  },
+  {
+    "word": "cannot",
+    "meaning": "できない",
+    "reading": "カノット"
+  },
+  {
+    "word": "unsupported",
+    "meaning": "サポートされていない",
+    "reading": "アンサポーテッド"
+  },
+  {
+    "word": "conflict",
+    "meaning": "競合",
+    "reading": "コンフリクト"
+  },
+  {
+    "word": "overflow",
+    "meaning": "オーバーフロー（容量超過）",
+    "reading": "オーバーフロー"
+  },
+  {
+    "word": "underflow",
+    "meaning": "アンダーフロー（下限割れ）",
+    "reading": "アンダーフロー"
+  },
+  {
+    "word": "out of memory",
+    "meaning": "メモリ不足",
+    "reading": "アウトオブメモリ"
+  },
+  {
+    "word": "disk full",
+    "meaning": "ディスク容量不足",
+    "reading": "ディスクフル"
+  },
+  {
+    "word": "connection refused",
+    "meaning": "接続拒否",
+    "reading": "コネクションリフューズド"
+  },
+  {
+    "word": "connection reset",
+    "meaning": "接続リセット",
+    "reading": "コネクションリセット"
+  },
+  {
+    "word": "connection closed",
+    "meaning": "接続が閉じられた",
+    "reading": "コネクションクローズド"
+  },
+  {
+    "word": "host unreachable",
+    "meaning": "ホストに到達できない",
+    "reading": "ホストアンリーチャブル"
+  },
+  {
+    "word": "network unreachable",
+    "meaning": "ネットワークに到達できない",
+    "reading": "ネットワークアンリーチャブル"
+  },
+  {
+    "word": "broken pipe",
+    "meaning": "通信切断（Broken Pipe）",
+    "reading": "ブロークンパイプ"
+  },
+  {
+    "word": "invalid argument",
+    "meaning": "無効な引数",
+    "reading": "インバリッドアーギュメント"
+  },
+  {
+    "word": "illegal state",
+    "meaning": "不正な状態",
+    "reading": "イリーガルステート"
+  },
+  {
+    "word": "illegal argument",
+    "meaning": "不正な引数",
+    "reading": "イリーガルアーギュメント"
+  },
+  {
+    "word": "index out of bounds",
+    "meaning": "配列やリストの範囲外",
+    "reading": "インデックスアウトオブバウンズ"
+  },
+  {
+    "word": "null pointer",
+    "meaning": "ヌルポインタ参照",
+    "reading": "ヌルポインタ"
+  },
+  {
+    "word": "segmentation fault",
+    "meaning": "不正メモリアクセス",
+    "reading": "セグメンテーションフォルト"
+  },
+  {
+    "word": "syntax error",
+    "meaning": "文法エラー",
+    "reading": "シンタックスエラー"
+  },
+  {
+    "word": "type error",
+    "meaning": "型エラー",
+    "reading": "タイプエラー"
+  },
+  {
+    "word": "reference error",
+    "meaning": "参照エラー",
+    "reading": "リファレンスエラー"
+  },
+  {
+    "word": "name error",
+    "meaning": "名前解決エラー",
+    "reading": "ネームエラー"
+  },
+  {
+    "word": "module not found",
+    "meaning": "モジュールが見つからない",
+    "reading": "モジュールノットファウンド"
+  },
+  {
+    "word": "import error",
+    "meaning": "インポートエラー",
+    "reading": "インポートエラー"
+  },
+  {
+    "word": "compile error",
+    "meaning": "コンパイルエラー",
+    "reading": "コンパイルエラー"
+  },
+  {
+    "word": "runtime error",
+    "meaning": "実行時エラー",
+    "reading": "ランタイムエラー"
+  },
+  {
+    "word": "IO error",
+    "meaning": "入出力エラー",
+    "reading": "アイオーエラー"
+  },
+  {
+    "word": "permission denied",
+    "meaning": "アクセス権限なし",
+    "reading": "パーミッションデナイド"
+  },
+  {
+    "word": "access denied",
+    "meaning": "アクセス拒否",
+    "reading": "アクセスデナイド"
+  },
+  {
+    "word": "invalid credentials",
+    "meaning": "無効な認証情報",
+    "reading": "インバリッドクレデンシャルズ"
+  },
+  {
+    "word": "authentication failed",
+    "meaning": "認証失敗",
+    "reading": "オーセンティケーションフェイルド"
+  },
+  {
+    "word": "authorization failed",
+    "meaning": "認可失敗",
+    "reading": "オーソライゼーションフェイルド"
+  },
+  {
+    "word": "resource not available",
+    "meaning": "リソースが利用できない",
+    "reading": "リソースノットアベイラブル"
+  },
+  {
+    "word": "service unavailable",
+    "meaning": "サービスが利用できない",
+    "reading": "サービスアンアベイラブル"
+  },
+  {
+    "word": "gateway timeout",
+    "meaning": "ゲートウェイのタイムアウト",
+    "reading": "ゲートウェイタイムアウト"
+  },
+  {
+    "word": "too many requests",
+    "meaning": "リクエスト過多",
+    "reading": "トゥーメニーリクエスツ"
+  },
+  {
+    "word": "rate limit exceeded",
+    "meaning": "レート制限超過",
+    "reading": "レートリミットエクシーデッド"
+  },
+  {
+    "word": "deprecated",
+    "meaning": "非推奨",
+    "reading": "デプリケーテッド"
+  },
+  {
+    "word": "unexpected token",
+    "meaning": "予期しないトークン",
+    "reading": "アンエクスペクテッドトークン"
+  },
+  {
+    "word": "unexpected end of input",
+    "meaning": "予期しない入力終端",
+    "reading": "アンエクスペクテッドエンドオブインプット"
+  },
+  {
+    "word": "invalid format",
+    "meaning": "無効な形式",
+    "reading": "インバリッドフォーマット"
+  },
+  {
+    "word": "parse error",
+    "meaning": "パースエラー",
+    "reading": "パースエラー"
+  },
+  {
+    "word": "serialization error",
+    "meaning": "シリアライズエラー",
+    "reading": "シリアライゼーションエラー"
+  },
+  {
+    "word": "deserialization error",
+    "meaning": "デシリアライズエラー",
+    "reading": "デシリアライゼーションエラー"
+  },
+  {
+    "word": "validation error",
+    "meaning": "バリデーションエラー",
+    "reading": "バリデーションエラー"
+  },
+  {
+    "word": "constraint violation",
+    "meaning": "制約違反",
+    "reading": "コンストレイントバイオレーション"
+  },
+  {
+    "word": "duplicate entry",
+    "meaning": "重複エントリ",
+    "reading": "デュプリケートエントリー"
+  },
+  {
+    "word": "deadlock",
+    "meaning": "デッドロック",
+    "reading": "デッドロック"
+  },
+  {
+    "word": "timeout exceeded",
+    "meaning": "タイムアウト超過",
+    "reading": "タイムアウトエクシーデッド"
+  },
+  {
+    "word": "max retries exceeded",
+    "meaning": "最大再試行回数超過",
+    "reading": "マックスリトライズエクシーデッド"
+  },
+  {
+    "word": "file not found",
+    "meaning": "ファイルが見つからない",
+    "reading": "ファイルノットファウンド"
+  },
+  {
+    "word": "directory not found",
+    "meaning": "ディレクトリが見つからない",
+    "reading": "ディレクトリノットファウンド"
+  },
+  {
+    "word": "read only",
+    "meaning": "読み取り専用",
+    "reading": "リードオンリー"
+  },
+  {
+    "word": "write protected",
+    "meaning": "書き込み禁止",
+    "reading": "ライトプロテクテッド"
+  },
+  {
+    "word": "broken link",
+    "meaning": "リンク切れ",
+    "reading": "ブロークンリンク"
+  },
+  {
+    "word": "circular reference",
+    "meaning": "循環参照",
+    "reading": "サーキュラーリファレンス"
+  },
+  {
+    "word": "stack overflow",
+    "meaning": "スタックオーバーフロー",
+    "reading": "スタックオーバーフロー"
+  },
+  {
+    "word": "heap overflow",
+    "meaning": "ヒープオーバーフロー",
+    "reading": "ヒープオーバーフロー"
+  },
+  {
+    "word": "memory leak",
+    "meaning": "メモリリーク",
+    "reading": "メモリリーク"
+  },
+  {
+    "word": "connection aborted",
+    "meaning": "接続中止",
+    "reading": "コネクションアボーテッド"
+  },
+  {
+    "word": "operation not permitted",
+    "meaning": "操作が許可されていない",
+    "reading": "オペレーションノットパーミッテッド"
+  },
+  {
+    "word": "unknown error",
+    "meaning": "不明なエラー",
+    "reading": "アンノウンエラー"
+  },
+  {
+    "word": "internal error",
+    "meaning": "内部エラー",
+    "reading": "インターナルエラー"
+  },
+  {
+    "word": "system error",
+    "meaning": "システムエラー",
+    "reading": "システムエラー"
+  },
+  {
+    "word": "fatal error",
+    "meaning": "致命的エラー",
+    "reading": "フェイタルエラー"
+  }
 ]

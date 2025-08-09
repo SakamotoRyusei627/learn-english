@@ -1,90 +1,442 @@
 [
-  { "word": "API", "meaning": "アプリケーションプログラミングインターフェース" },
-  { "word": "endpoint", "meaning": "APIの接続先URL" },
-  { "word": "resource", "meaning": "リソース（対象データ）" },
-  { "word": "controller", "meaning": "リクエストを受けて処理するクラス/関数" },
-  { "word": "service", "meaning": "ビジネスロジックを実装する層" },
-  { "word": "repository", "meaning": "データアクセス層" },
-  { "word": "model", "meaning": "データ構造を表すクラスや型" },
-  { "word": "entity", "meaning": "DBのテーブルに対応するオブジェクト" },
-  { "word": "DTO", "meaning": "データ転送オブジェクト（Data Transfer Object）" },
-  { "word": "VO", "meaning": "値オブジェクト（Value Object）" },
-  { "word": "DAO", "meaning": "データアクセスオブジェクト（Data Access Object）" },
-  { "word": "schema", "meaning": "データ構造や定義" },
-  { "word": "validation", "meaning": "入力値の検証" },
-  { "word": "middleware", "meaning": "処理の途中で介在する機能" },
-  { "word": "handler", "meaning": "イベントやリクエストを処理する関数" },
-  { "word": "router", "meaning": "ルーティング設定を行うモジュール" },
-  { "word": "route", "meaning": "リクエストパスと処理の対応" },
-  { "word": "path parameter", "meaning": "URLの一部として渡される値" },
-  { "word": "query parameter", "meaning": "URLのクエリ文字列として渡される値" },
-  { "word": "request body", "meaning": "リクエストの本文" },
-  { "word": "response body", "meaning": "レスポンスの本文" },
-  { "word": "status code", "meaning": "HTTPレスポンスの状態コード" },
-  { "word": "payload", "meaning": "送信または受信する実データ" },
-  { "word": "header", "meaning": "HTTPヘッダー" },
-  { "word": "CORS", "meaning": "クロスオリジンリソース共有" },
-  { "word": "REST", "meaning": "Representational State Transfer" },
-  { "word": "GraphQL", "meaning": "APIのクエリ言語" },
-  { "word": "SOAP", "meaning": "XMLベースのAPIプロトコル" },
-  { "word": "RPC", "meaning": "リモートプロシージャコール" },
-  { "word": "versioning", "meaning": "APIのバージョン管理" },
-  { "word": "authentication", "meaning": "ユーザー認証" },
-  { "word": "authorization", "meaning": "アクセス許可" },
-  { "word": "token", "meaning": "認証や認可に使う文字列" },
-  { "word": "JWT", "meaning": "JSON Web Token" },
-  { "word": "OAuth", "meaning": "認証/認可プロトコル" },
-  { "word": "refresh token", "meaning": "アクセストークンを更新するためのトークン" },
-  { "word": "session", "meaning": "ユーザーごとの状態情報" },
-  { "word": "cookie", "meaning": "クライアントに保存される小さなデータ" },
-  { "word": "cache", "meaning": "データの一時保存" },
-  { "word": "idempotent", "meaning": "複数回実行しても結果が変わらない性質" },
-  { "word": "rate limit", "meaning": "一定時間あたりのリクエスト制限" },
-  { "word": "throttling", "meaning": "リクエスト制限の仕組み" },
-  { "word": "logging", "meaning": "ログ記録" },
-  { "word": "monitoring", "meaning": "監視" },
-  { "word": "metrics", "meaning": "計測データ" },
-  { "word": "tracing", "meaning": "リクエストの経路追跡" },
-  { "word": "retry", "meaning": "再試行" },
-  { "word": "circuit breaker", "meaning": "障害時に処理を遮断する仕組み" },
-  { "word": "fallback", "meaning": "代替処理" },
-  { "word": "queue", "meaning": "メッセージやジョブの順序制御" },
-  { "word": "worker", "meaning": "バックグラウンド処理を行うプロセス" },
-  { "word": "job", "meaning": "バックエンドで実行される作業単位" },
-  { "word": "cron", "meaning": "定期実行ジョブのスケジューラ" },
-  { "word": "webhook", "meaning": "イベント発生時に外部URLを呼び出す仕組み" },
-  { "word": "callback", "meaning": "呼び戻し関数" },
-  { "word": "event", "meaning": "出来事、発生したアクション" },
-  { "word": "event-driven", "meaning": "イベント駆動型" },
-  { "word": "pub/sub", "meaning": "Publish/Subscribeメッセージモデル" },
-  { "word": "message broker", "meaning": "メッセージの中継役" },
-  { "word": "queue depth", "meaning": "キュー内のメッセージ数" },
-  { "word": "scaling", "meaning": "システムの拡張" },
-  { "word": "horizontal scaling", "meaning": "サーバー台数を増やす拡張" },
-  { "word": "vertical scaling", "meaning": "サーバー性能を上げる拡張" },
-  { "word": "load balancing", "meaning": "負荷分散" },
-  { "word": "failover", "meaning": "障害発生時に別の系に切替" },
-  { "word": "high availability", "meaning": "高可用性" },
-  { "word": "redundancy", "meaning": "冗長化" },
-  { "word": "latency", "meaning": "遅延" },
-  { "word": "throughput", "meaning": "処理量" },
-  { "word": "bandwidth", "meaning": "帯域幅" },
-  { "word": "serialization", "meaning": "データをバイト列に変換" },
-  { "word": "deserialization", "meaning": "バイト列をデータに戻す" },
-  { "word": "marshalling", "meaning": "データ構造を送信形式に変換" },
-  { "word": "unmarshalling", "meaning": "送信形式からデータ構造に戻す" },
-  { "word": "endpoint security", "meaning": "APIのエンドポイントセキュリティ" },
-  { "word": "input sanitization", "meaning": "入力値の無害化" },
-  { "word": "escape", "meaning": "特殊文字のエスケープ" },
-  { "word": "injection", "meaning": "コード注入攻撃" },
-  { "word": "SQL injection", "meaning": "SQLインジェクション攻撃" },
-  { "word": "XSS", "meaning": "クロスサイトスクリプティング" },
-  { "word": "CSRF", "meaning": "クロスサイトリクエストフォージェリ" },
-  { "word": "CSP", "meaning": "コンテンツセキュリティポリシー" },
-  { "word": "rate limiter", "meaning": "リクエスト制限ツール" },
-  { "word": "reverse proxy", "meaning": "リバースプロキシ" },
-  { "word": "gateway", "meaning": "ネットワークの出入口" },
-  { "word": "service mesh", "meaning": "サービス間通信を管理する仕組み" },
-  { "word": "API gateway", "meaning": "APIへのアクセスを集約するゲートウェイ" },
-  { "word": "contract testing", "meaning": "APIの契約テスト" }
+  {
+    "reading": "エーピーアイ",
+    "word": "API",
+    "meaning": "アプリケーションプログラミングインターフェース"
+  },
+  {
+    "reading": "エンドポイント",
+    "word": "endpoint",
+    "meaning": "APIの接続先URL"
+  },
+  {
+    "reading": "リソース",
+    "word": "resource",
+    "meaning": "リソース（対象データ）"
+  },
+  {
+    "reading": "コントローラー",
+    "word": "controller",
+    "meaning": "リクエストを受けて処理するクラス/関数"
+  },
+  {
+    "reading": "サービス",
+    "word": "service",
+    "meaning": "ビジネスロジックを実装する層"
+  },
+  {
+    "reading": "リポジトリ",
+    "word": "repository",
+    "meaning": "データアクセス層"
+  },
+  {
+    "reading": "モデル",
+    "word": "model",
+    "meaning": "データ構造を表すクラスや型"
+  },
+  {
+    "reading": "エンティティ",
+    "word": "entity",
+    "meaning": "DBのテーブルに対応するオブジェクト"
+  },
+  {
+    "reading": "ディーティーオー",
+    "word": "DTO",
+    "meaning": "データ転送オブジェクト（Data Transfer Object）"
+  },
+  {
+    "reading": "ブイオー",
+    "word": "VO",
+    "meaning": "値オブジェクト（Value Object）"
+  },
+  {
+    "reading": "ディーエーオー",
+    "word": "DAO",
+    "meaning": "データアクセスオブジェクト（Data Access Object）"
+  },
+  {
+    "reading": "スキーマ",
+    "word": "schema",
+    "meaning": "データ構造や定義"
+  },
+  {
+    "reading": "バリデーション",
+    "word": "validation",
+    "meaning": "入力値の検証"
+  },
+  {
+    "reading": "ミドルウェア",
+    "word": "middleware",
+    "meaning": "処理の途中で介在する機能"
+  },
+  {
+    "reading": "ハンドラー",
+    "word": "handler",
+    "meaning": "イベントやリクエストを処理する関数"
+  },
+  {
+    "reading": "ルーター",
+    "word": "router",
+    "meaning": "ルーティング設定を行うモジュール"
+  },
+  {
+    "reading": "ルート",
+    "word": "route",
+    "meaning": "リクエストパスと処理の対応"
+  },
+  {
+    "reading": "パスパラメーター",
+    "word": "path parameter",
+    "meaning": "URLの一部として渡される値"
+  },
+  {
+    "reading": "クエリパラメーター",
+    "word": "query parameter",
+    "meaning": "URLのクエリ文字列として渡される値"
+  },
+  {
+    "reading": "リクエストボディ",
+    "word": "request body",
+    "meaning": "リクエストの本文"
+  },
+  {
+    "reading": "レスポンスボディ",
+    "word": "response body",
+    "meaning": "レスポンスの本文"
+  },
+  {
+    "reading": "ステータスコード",
+    "word": "status code",
+    "meaning": "HTTPレスポンスの状態コード"
+  },
+  {
+    "reading": "ペイロード",
+    "word": "payload",
+    "meaning": "送信または受信する実データ"
+  },
+  {
+    "reading": "ヘッダー",
+    "word": "header",
+    "meaning": "HTTPヘッダー"
+  },
+  {
+    "reading": "コース",
+    "word": "CORS",
+    "meaning": "クロスオリジンリソース共有"
+  },
+  {
+    "reading": "レスト",
+    "word": "REST",
+    "meaning": "Representational State Transfer"
+  },
+  {
+    "reading": "グラフキューエル",
+    "word": "GraphQL",
+    "meaning": "APIのクエリ言語"
+  },
+  {
+    "reading": "ソープ",
+    "word": "SOAP",
+    "meaning": "XMLベースのAPIプロトコル"
+  },
+  {
+    "reading": "アールピーシー",
+    "word": "RPC",
+    "meaning": "リモートプロシージャコール"
+  },
+  {
+    "reading": "バージョニング",
+    "word": "versioning",
+    "meaning": "APIのバージョン管理"
+  },
+  {
+    "reading": "オーセンティケーション",
+    "word": "authentication",
+    "meaning": "ユーザー認証"
+  },
+  {
+    "reading": "オーソライゼーション",
+    "word": "authorization",
+    "meaning": "アクセス許可"
+  },
+  {
+    "reading": "トークン",
+    "word": "token",
+    "meaning": "認証や認可に使う文字列"
+  },
+  {
+    "reading": "ジェイダブリューティー",
+    "word": "JWT",
+    "meaning": "JSON Web Token"
+  },
+  {
+    "reading": "オーオース",
+    "word": "OAuth",
+    "meaning": "認証/認可プロトコル"
+  },
+  {
+    "reading": "リフレッシュトークン",
+    "word": "refresh token",
+    "meaning": "アクセストークンを更新するためのトークン"
+  },
+  {
+    "reading": "セッション",
+    "word": "session",
+    "meaning": "ユーザーごとの状態情報"
+  },
+  {
+    "reading": "クッキー",
+    "word": "cookie",
+    "meaning": "クライアントに保存される小さなデータ"
+  },
+  {
+    "reading": "キャッシュ",
+    "word": "cache",
+    "meaning": "データの一時保存"
+  },
+  {
+    "reading": "アイデムポテント",
+    "word": "idempotent",
+    "meaning": "複数回実行しても結果が変わらない性質"
+  },
+  {
+    "reading": "レートリミット",
+    "word": "rate limit",
+    "meaning": "一定時間あたりのリクエスト制限"
+  },
+  {
+    "reading": "スロットリング",
+    "word": "throttling",
+    "meaning": "リクエスト制限の仕組み"
+  },
+  {
+    "reading": "ロギング",
+    "word": "logging",
+    "meaning": "ログ記録"
+  },
+  {
+    "reading": "モニタリング",
+    "word": "monitoring",
+    "meaning": "監視"
+  },
+  {
+    "reading": "メトリクス",
+    "word": "metrics",
+    "meaning": "計測データ"
+  },
+  {
+    "reading": "トレーシング",
+    "word": "tracing",
+    "meaning": "リクエストの経路追跡"
+  },
+  {
+    "reading": "リトライ",
+    "word": "retry",
+    "meaning": "再試行"
+  },
+  {
+    "reading": "サーキットブレーカー",
+    "word": "circuit breaker",
+    "meaning": "障害時に処理を遮断する仕組み"
+  },
+  {
+    "reading": "フォールバック",
+    "word": "fallback",
+    "meaning": "代替処理"
+  },
+  {
+    "reading": "キュー",
+    "word": "queue",
+    "meaning": "メッセージやジョブの順序制御"
+  },
+  {
+    "reading": "ワーカー",
+    "word": "worker",
+    "meaning": "バックグラウンド処理を行うプロセス"
+  },
+  {
+    "reading": "ジョブ",
+    "word": "job",
+    "meaning": "バックエンドで実行される作業単位"
+  },
+  {
+    "reading": "クロン",
+    "word": "cron",
+    "meaning": "定期実行ジョブのスケジューラ"
+  },
+  {
+    "reading": "ウェブフック",
+    "word": "webhook",
+    "meaning": "イベント発生時に外部URLを呼び出す仕組み"
+  },
+  {
+    "reading": "コールバック",
+    "word": "callback",
+    "meaning": "呼び戻し関数"
+  },
+  {
+    "reading": "イベント",
+    "word": "event",
+    "meaning": "出来事、発生したアクション"
+  },
+  {
+    "reading": "イベントドリブン",
+    "word": "event-driven",
+    "meaning": "イベント駆動型"
+  },
+  {
+    "reading": "パブサブ",
+    "word": "pub/sub",
+    "meaning": "Publish/Subscribeメッセージモデル"
+  },
+  {
+    "reading": "メッセージブローカー",
+    "word": "message broker",
+    "meaning": "メッセージの中継役"
+  },
+  {
+    "reading": "キューデプス",
+    "word": "queue depth",
+    "meaning": "キュー内のメッセージ数"
+  },
+  {
+    "reading": "スケーリング",
+    "word": "scaling",
+    "meaning": "システムの拡張"
+  },
+  {
+    "reading": "ホリゾンタルスケーリング",
+    "word": "horizontal scaling",
+    "meaning": "サーバー台数を増やす拡張"
+  },
+  {
+    "reading": "バーティカルスケーリング",
+    "word": "vertical scaling",
+    "meaning": "サーバー性能を上げる拡張"
+  },
+  {
+    "reading": "ロードバランシング",
+    "word": "load balancing",
+    "meaning": "負荷分散"
+  },
+  {
+    "reading": "フェイルオーバー",
+    "word": "failover",
+    "meaning": "障害発生時に別の系に切替"
+  },
+  {
+    "reading": "ハイアベイラビリティ",
+    "word": "high availability",
+    "meaning": "高可用性"
+  },
+  {
+    "reading": "リダンダンシー",
+    "word": "redundancy",
+    "meaning": "冗長化"
+  },
+  {
+    "reading": "レイテンシー",
+    "word": "latency",
+    "meaning": "遅延"
+  },
+  {
+    "reading": "スループット",
+    "word": "throughput",
+    "meaning": "処理量"
+  },
+  {
+    "reading": "バンド幅",
+    "word": "bandwidth",
+    "meaning": "帯域幅"
+  },
+  {
+    "reading": "シリアライゼーション",
+    "word": "serialization",
+    "meaning": "データをバイト列に変換"
+  },
+  {
+    "reading": "デシリアライゼーション",
+    "word": "deserialization",
+    "meaning": "バイト列をデータに戻す"
+  },
+  {
+    "reading": "マーシャリング",
+    "word": "marshalling",
+    "meaning": "データ構造を送信形式に変換"
+  },
+  {
+    "reading": "アンマーシャリング",
+    "word": "unmarshalling",
+    "meaning": "送信形式からデータ構造に戻す"
+  },
+  {
+    "reading": "エンドポイントセキュリティ",
+    "word": "endpoint security",
+    "meaning": "APIのエンドポイントセキュリティ"
+  },
+  {
+    "reading": "インプットサニタイゼーション",
+    "word": "input sanitization",
+    "meaning": "入力値の無害化"
+  },
+  {
+    "reading": "エスケープ",
+    "word": "escape",
+    "meaning": "特殊文字のエスケープ"
+  },
+  {
+    "reading": "インジェクション",
+    "word": "injection",
+    "meaning": "コード注入攻撃"
+  },
+  {
+    "reading": "エスキューエルインジェクション",
+    "word": "SQL injection",
+    "meaning": "SQLインジェクション攻撃"
+  },
+  {
+    "reading": "エックスエスエス",
+    "word": "XSS",
+    "meaning": "クロスサイトスクリプティング"
+  },
+  {
+    "reading": "シーエスアールエフ",
+    "word": "CSRF",
+    "meaning": "クロスサイトリクエストフォージェリ"
+  },
+  {
+    "reading": "シーエスピー",
+    "word": "CSP",
+    "meaning": "コンテンツセキュリティポリシー"
+  },
+  {
+    "reading": "レートリミッター",
+    "word": "rate limiter",
+    "meaning": "リクエスト制限ツール"
+  },
+  {
+    "reading": "リバースプロキシ",
+    "word": "reverse proxy",
+    "meaning": "リバースプロキシ"
+  },
+  {
+    "reading": "ゲートウェイ",
+    "word": "gateway",
+    "meaning": "ネットワークの出入口"
+  },
+  {
+    "reading": "サービスメッシュ",
+    "word": "service mesh",
+    "meaning": "サービス間通信を管理する仕組み"
+  },
+  {
+    "reading": "エーピーアイゲートウェイ",
+    "word": "API gateway",
+    "meaning": "APIへのアクセスを集約するゲートウェイ"
+  },
+  {
+    "reading": "コントラクトテスティング",
+    "word": "contract testing",
+    "meaning": "APIの契約テスト"
+  }
 ]

@@ -15,8 +15,8 @@ export default function Page() {
   if (cats.length === 0) return <main className="p-4">読み込み中...</main>
 
   return (
-      <main className="p-4">
-        <Tabs defaultValue={cats[0].category} className="w-full">
+      <main className="p-4 min-h-screen">
+        <Tabs defaultValue={cats[0].category} className="w-full min-h-[calc(100vh-50px)]">
           <ScrollArea className="w-full">
             <TabsList className="w-max flex gap-1 px-1">
               {cats.map((c) => (
@@ -31,9 +31,8 @@ export default function Page() {
             </TabsList>
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
-
           {cats.map((c) => (
-              <TabsContent key={c.category} value={c.category}>
+              <TabsContent key={c.category} value={c.category} className='py-40 min-h-fit'>
                 {/* WordSwiper は Entry[] を受け取れるようにしておく */}
                 {/* 対義語ペアも WordCard 内で判定表示 */}
                 <WordSwiper entries={c.items as any} />

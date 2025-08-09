@@ -1,79 +1,362 @@
 [
-  { "word": "git", "meaning": "分散型バージョン管理システム" },
-  { "word": "repository", "meaning": "リポジトリ（コードや履歴を保存する場所）" },
-  { "word": "repo", "meaning": "リポジトリの略称" },
-  { "word": "clone", "meaning": "リポジトリを複製する" },
-  { "word": "fork", "meaning": "リポジトリを分岐させてコピーする" },
-  { "word": "remote", "meaning": "リモートリポジトリ（外部にあるリポジトリ）" },
-  { "word": "origin", "meaning": "デフォルトのリモートリポジトリ名" },
-  { "word": "upstream", "meaning": "元となるリポジトリ" },
-  { "word": "pull", "meaning": "リモートの変更を取得してマージする" },
-  { "word": "fetch", "meaning": "リモートの変更を取得する（マージはしない）" },
-  { "word": "push", "meaning": "ローカルの変更をリモートに送信する" },
-  { "word": "commit", "meaning": "変更を記録する" },
-  { "word": "stage", "meaning": "コミット対象として追加する" },
-  { "word": "add", "meaning": "ファイルをステージングエリアに追加する" },
-  { "word": "diff", "meaning": "差分を表示する" },
-  { "word": "merge", "meaning": "別のブランチを統合する" },
-  { "word": "rebase", "meaning": "ベースを付け替えて履歴を並び替える" },
-  { "word": "cherry-pick", "meaning": "特定のコミットを選んで適用する" },
-  { "word": "branch", "meaning": "ブランチ（作業の分岐）" },
-  { "word": "checkout", "meaning": "別のブランチやコミットに切り替える" },
-  { "word": "switch", "meaning": "ブランチを切り替える" },
-  { "word": "tag", "meaning": "特定のコミットに名前をつける" },
-  { "word": "init", "meaning": "新しいリポジトリを作成する" },
-  { "word": "log", "meaning": "コミット履歴を表示する" },
-  { "word": "status", "meaning": "作業ツリーの状態を表示する" },
-  { "word": "reset", "meaning": "履歴やステージングを元に戻す" },
-  { "word": "restore", "meaning": "ファイルを過去の状態に戻す" },
-  { "word": "stash", "meaning": "作業中の変更を一時退避する" },
-  { "word": "apply", "meaning": "stashなどを適用する" },
-  { "word": "pop", "meaning": "stashを適用して削除する" },
-  { "word": "blame", "meaning": "各行を誰が変更したか表示する" },
-  { "word": "clean", "meaning": "追跡されていないファイルを削除する" },
-
-  { "word": "WIP", "meaning": "作業中（Work In Progress）" },
-  { "word": "feat", "meaning": "新機能追加（commitメッセージprefix）" },
-  { "word": "fix", "meaning": "不具合修正" },
-  { "word": "docs", "meaning": "ドキュメント修正" },
-  { "word": "style", "meaning": "コードスタイル変更（機能変更なし）" },
-  { "word": "refactor", "meaning": "機能は変えずにコード改善" },
-  { "word": "perf", "meaning": "パフォーマンス改善" },
-  { "word": "test", "meaning": "テストコード追加・修正" },
-  { "word": "chore", "meaning": "雑務的な変更（依存関係更新など）" },
-  { "word": "revert", "meaning": "過去のコミットを取り消す" },
-  { "word": "BREAKING CHANGE", "meaning": "後方互換性のない変更" },
-  { "word": "merge commit", "meaning": "マージ時のコミット" },
-  { "word": "squash", "meaning": "複数コミットを1つにまとめる" },
-  { "word": "amend", "meaning": "直前のコミットを修正" },
-  { "word": "signoff", "meaning": "署名付きでコミットする" },
-  { "word": "review", "meaning": "レビューする" },
-  { "word": "approve", "meaning": "承認する" },
-  { "word": "reject", "meaning": "却下する" },
-  { "word": "CI", "meaning": "継続的インテグレーション" },
-  { "word": "CD", "meaning": "継続的デリバリー／デプロイ" },
-
-  { "word": "conflict", "meaning": "マージ時の競合" },
-  { "word": "resolve", "meaning": "競合を解決する" },
-  { "word": "synchronize", "meaning": "同期する" },
-  { "word": "hook", "meaning": "Gitイベントに反応するスクリプト" },
-  { "word": "pre-commit", "meaning": "コミット前に実行されるフック" },
-  { "word": "pre-push", "meaning": "プッシュ前に実行されるフック" },
-  { "word": "commit-msg", "meaning": "コミットメッセージ検証用フック" },
-
-  { "word": "origin/main", "meaning": "リモートのmainブランチ" },
-  { "word": "origin/develop", "meaning": "リモートのdevelopブランチ" },
-  { "word": "HEAD", "meaning": "現在のブランチの先頭" },
-  { "word": "HEAD~1", "meaning": "1つ前のコミット" },
-  { "word": "HEAD^", "meaning": "親コミット" },
-  { "word": "detached HEAD", "meaning": "ブランチに属さない状態" },
-
-  { "word": "up-to-date", "meaning": "最新の状態" },
-  { "word": "out-of-date", "meaning": "古い状態" },
-  { "word": "fast-forward", "meaning": "差分がないためそのまま進めるマージ" },
-  { "word": "non-fast-forward", "meaning": "強制的に進めるマージ" },
-
-  { "word": "submodule", "meaning": "他リポジトリを埋め込んだもの" },
-  { "word": "worktree", "meaning": "複数作業ディレクトリ" },
-  { "word": "bare repository", "meaning": "作業ツリーを持たないリポジトリ" }
+  {
+    "word": "git",
+    "meaning": "分散型バージョン管理システム",
+    "reading": "ギット"
+  },
+  {
+    "word": "repository",
+    "meaning": "リポジトリ（コードや履歴を保存する場所）",
+    "reading": "リポジトリ"
+  },
+  {
+    "word": "repo",
+    "meaning": "リポジトリの略称",
+    "reading": "リポ"
+  },
+  {
+    "word": "clone",
+    "meaning": "リポジトリを複製する",
+    "reading": "クローン"
+  },
+  {
+    "word": "fork",
+    "meaning": "リポジトリを分岐させてコピーする",
+    "reading": "フォーク"
+  },
+  {
+    "word": "remote",
+    "meaning": "リモートリポジトリ（外部にあるリポジトリ）",
+    "reading": "リモート"
+  },
+  {
+    "word": "origin",
+    "meaning": "デフォルトのリモートリポジトリ名",
+    "reading": "オリジン"
+  },
+  {
+    "word": "upstream",
+    "meaning": "元となるリポジトリ",
+    "reading": "アップストリーム"
+  },
+  {
+    "word": "pull",
+    "meaning": "リモートの変更を取得してマージする",
+    "reading": "プル"
+  },
+  {
+    "word": "fetch",
+    "meaning": "リモートの変更を取得する（マージはしない）",
+    "reading": "フェッチ"
+  },
+  {
+    "word": "push",
+    "meaning": "ローカルの変更をリモートに送信する",
+    "reading": "プッシュ"
+  },
+  {
+    "word": "commit",
+    "meaning": "変更を記録する",
+    "reading": "コミット"
+  },
+  {
+    "word": "stage",
+    "meaning": "コミット対象として追加する",
+    "reading": "ステージ"
+  },
+  {
+    "word": "add",
+    "meaning": "ファイルをステージングエリアに追加する",
+    "reading": "アド"
+  },
+  {
+    "word": "diff",
+    "meaning": "差分を表示する",
+    "reading": "ディフ"
+  },
+  {
+    "word": "merge",
+    "meaning": "別のブランチを統合する",
+    "reading": "マージ"
+  },
+  {
+    "word": "rebase",
+    "meaning": "ベースを付け替えて履歴を並び替える",
+    "reading": "リベース"
+  },
+  {
+    "word": "cherry-pick",
+    "meaning": "特定のコミットを選んで適用する",
+    "reading": "チェリーピック"
+  },
+  {
+    "word": "branch",
+    "meaning": "ブランチ（作業の分岐）",
+    "reading": "ブランチ"
+  },
+  {
+    "word": "checkout",
+    "meaning": "別のブランチやコミットに切り替える",
+    "reading": "チェックアウト"
+  },
+  {
+    "word": "switch",
+    "meaning": "ブランチを切り替える",
+    "reading": "スイッチ"
+  },
+  {
+    "word": "tag",
+    "meaning": "特定のコミットに名前をつける",
+    "reading": "タグ"
+  },
+  {
+    "word": "init",
+    "meaning": "新しいリポジトリを作成する",
+    "reading": "イニット"
+  },
+  {
+    "word": "log",
+    "meaning": "コミット履歴を表示する",
+    "reading": "ログ"
+  },
+  {
+    "word": "status",
+    "meaning": "作業ツリーの状態を表示する",
+    "reading": "ステータス"
+  },
+  {
+    "word": "reset",
+    "meaning": "履歴やステージングを元に戻す",
+    "reading": "リセット"
+  },
+  {
+    "word": "restore",
+    "meaning": "ファイルを過去の状態に戻す",
+    "reading": "リストア"
+  },
+  {
+    "word": "stash",
+    "meaning": "作業中の変更を一時退避する",
+    "reading": "スタッシュ"
+  },
+  {
+    "word": "apply",
+    "meaning": "stashなどを適用する",
+    "reading": "アプライ"
+  },
+  {
+    "word": "pop",
+    "meaning": "stashを適用して削除する",
+    "reading": "ポップ"
+  },
+  {
+    "word": "blame",
+    "meaning": "各行を誰が変更したか表示する",
+    "reading": "ブレーム"
+  },
+  {
+    "word": "clean",
+    "meaning": "追跡されていないファイルを削除する",
+    "reading": "クリーン"
+  },
+  {
+    "word": "WIP",
+    "meaning": "作業中（Work In Progress）",
+    "reading": "ダブリューアイピー"
+  },
+  {
+    "word": "feat",
+    "meaning": "新機能追加（commitメッセージprefix）",
+    "reading": "フィート"
+  },
+  {
+    "word": "fix",
+    "meaning": "不具合修正",
+    "reading": "フィックス"
+  },
+  {
+    "word": "docs",
+    "meaning": "ドキュメント修正",
+    "reading": "ドックス"
+  },
+  {
+    "word": "style",
+    "meaning": "コードスタイル変更（機能変更なし）",
+    "reading": "スタイル"
+  },
+  {
+    "word": "refactor",
+    "meaning": "機能は変えずにコード改善",
+    "reading": "リファクター"
+  },
+  {
+    "word": "perf",
+    "meaning": "パフォーマンス改善",
+    "reading": "パーフ"
+  },
+  {
+    "word": "test",
+    "meaning": "テストコード追加・修正",
+    "reading": "テスト"
+  },
+  {
+    "word": "chore",
+    "meaning": "雑務的な変更（依存関係更新など）",
+    "reading": "チョア"
+  },
+  {
+    "word": "revert",
+    "meaning": "過去のコミットを取り消す",
+    "reading": "リバート"
+  },
+  {
+    "word": "BREAKING CHANGE",
+    "meaning": "後方互換性のない変更",
+    "reading": "ブレイキングチェンジ"
+  },
+  {
+    "word": "merge commit",
+    "meaning": "マージ時のコミット",
+    "reading": "マージコミット"
+  },
+  {
+    "word": "squash",
+    "meaning": "複数コミットを1つにまとめる",
+    "reading": "スクワッシュ"
+  },
+  {
+    "word": "amend",
+    "meaning": "直前のコミットを修正",
+    "reading": "アメンド"
+  },
+  {
+    "word": "signoff",
+    "meaning": "署名付きでコミットする",
+    "reading": "サインオフ"
+  },
+  {
+    "word": "review",
+    "meaning": "レビューする",
+    "reading": "レビュー"
+  },
+  {
+    "word": "approve",
+    "meaning": "承認する",
+    "reading": "アプルーブ"
+  },
+  {
+    "word": "reject",
+    "meaning": "却下する",
+    "reading": "リジェクト"
+  },
+  {
+    "word": "CI",
+    "meaning": "継続的インテグレーション",
+    "reading": "シーアイ"
+  },
+  {
+    "word": "CD",
+    "meaning": "継続的デリバリー／デプロイ",
+    "reading": "シーディー"
+  },
+  {
+    "word": "conflict",
+    "meaning": "マージ時の競合",
+    "reading": "コンフリクト"
+  },
+  {
+    "word": "resolve",
+    "meaning": "競合を解決する",
+    "reading": "リゾルブ"
+  },
+  {
+    "word": "synchronize",
+    "meaning": "同期する",
+    "reading": "シンクロナイズ"
+  },
+  {
+    "word": "hook",
+    "meaning": "Gitイベントに反応するスクリプト",
+    "reading": "フック"
+  },
+  {
+    "word": "pre-commit",
+    "meaning": "コミット前に実行されるフック",
+    "reading": "プリコミット"
+  },
+  {
+    "word": "pre-push",
+    "meaning": "プッシュ前に実行されるフック",
+    "reading": "プリプッシュ"
+  },
+  {
+    "word": "commit-msg",
+    "meaning": "コミットメッセージ検証用フック",
+    "reading": "コミットメッセージ"
+  },
+  {
+    "word": "origin/main",
+    "meaning": "リモートのmainブランチ",
+    "reading": "オリジン／メイン"
+  },
+  {
+    "word": "origin/develop",
+    "meaning": "リモートのdevelopブランチ",
+    "reading": "オリジン／デベロップ"
+  },
+  {
+    "word": "HEAD",
+    "meaning": "現在のブランチの先頭",
+    "reading": "ヘッド"
+  },
+  {
+    "word": "HEAD~1",
+    "meaning": "1つ前のコミット",
+    "reading": "ヘッドチルダワン"
+  },
+  {
+    "word": "HEAD^",
+    "meaning": "親コミット",
+    "reading": "ヘッドキャレット"
+  },
+  {
+    "word": "detached HEAD",
+    "meaning": "ブランチに属さない状態",
+    "reading": "デタッチドヘッド"
+  },
+  {
+    "word": "up-to-date",
+    "meaning": "最新の状態",
+    "reading": "アップトゥデート"
+  },
+  {
+    "word": "out-of-date",
+    "meaning": "古い状態",
+    "reading": "アウトオブデート"
+  },
+  {
+    "word": "fast-forward",
+    "meaning": "差分がないためそのまま進めるマージ",
+    "reading": "ファストフォワード"
+  },
+  {
+    "word": "non-fast-forward",
+    "meaning": "強制的に進めるマージ",
+    "reading": "ノンファストフォワード"
+  },
+  {
+    "word": "submodule",
+    "meaning": "他リポジトリを埋め込んだもの",
+    "reading": "サブモジュール"
+  },
+  {
+    "word": "worktree",
+    "meaning": "複数作業ディレクトリ",
+    "reading": "ワークツリー"
+  },
+  {
+    "word": "bare repository",
+    "meaning": "作業ツリーを持たないリポジトリ",
+    "reading": "ベアリポジトリ"
+  }
 ]

@@ -15,7 +15,10 @@ export function WordCard({ entry }: Props) {
   return (
       <Card className="w-full max-w-md mx-auto text-center p-6 shadow-md">
         <CardContent>
-          <div className="text-3xl font-bold mb-2 break-words">{displayText}</div>
+          {entry.reading && (
+              <div className="text-xs text-muted-foreground">{entry.reading}</div>
+          )}
+          <div className="text-2xl font-bold mb-2 break-words">{displayText}</div>
           <div className="text-muted-foreground text-base">{entry.meaning}</div>
         </CardContent>
       </Card>
